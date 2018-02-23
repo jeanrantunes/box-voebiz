@@ -1,0 +1,401 @@
+<div class="container p-0 p-md-15" id="accordion">
+	<div data-component="Purchase-box">
+		<header class="row no-gutters align-items-center">
+			<div class="col-lg-8 col-12 order-lg-1 order-2 col-lg-pb-8 p-md-0 p-4">
+				<div class="row no-gutters align-items-center mt-md-3 mt-lg-0">
+					<div class="col-lg-pb-2 col-lg-2 col-md-2 col-12">
+						<a id="points" class="btn btn-link btn-nav-purchase no-bg collapsed p-0 h-md-100 mb-3 mb-md-0" data-toggle="collapse" data-target="#collapsePoints"
+						 aria-expanded="true" aria-controls="collapsePoints">
+							<i class="icon golicons-airplane d-md-inline-block d-none"></i>
+							<span class="pl-md-5 p-0">Utilizar pontos</span>
+						</a>
+					</div>
+					<div class="col-lg-pb-5 col-lg-5 col-md-5 col-12">
+						<div class="form-group form-control-purchase ml-lg-1 ml-md-3 ml-0">
+							<label for="airport-from" class="text-uppercase">Viajar de</label>
+							<select class="form-control select-purchase-from" id="airport-from">
+								<option></option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-pb-5 col-lg-5 col-md-5 col-12">
+						<div class="form-group form-control-purchase ml-lg-1 ml-0 mr-lg-1 mr-0 ml-md-2 mt-md-0 mt-2">
+							<label for="airport-to" class="text-uppercase">para</label>
+							<select class="form-control select-purchase-to" id="airport-to">
+								<option></option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-12 order-lg-2 order-1 col-lg-pb-4">
+				<div class="row no-gutters">
+					<div class="col-md-4 col-sm-3 col-3 d-md-none">
+						<a id="points" class="btn btn-link btn-nav-purchase collapsed br-4" data-toggle="collapse" data-target="#collapsePoints"
+						 aria-expanded="true" aria-controls="collapsePoints">
+							<i class="icon golicons-airplane"></i>
+							<span>Utilizar pontos</span>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-3 col-3">
+						<a id="make-checkin" class="btn btn-nav-purchase btn-link collapsed" data-toggle="collapse" data-target="#collapseMakeCheckin"
+						 aria-expanded="false" aria-controls="collapseMakeCheckin">
+							<i class="icon golicons-watch"></i>
+							<span>Fazer check-in</span>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-3 col-3">
+						<a id="status-flight" class="btn btn-nav-purchase btn-link collapsed bl-4" data-toggle="collapse" data-target="#collapseStatusFlight"
+						 aria-expanded="false" aria-controls="collapseStatusFlight">
+							<i class="icon golicons-clock"></i>
+							<span class="pr-lg-3 pr-2">Status de voo</span>
+						</a>
+					</div>
+					<div class="col-md-4 col-sm-3 col-3">
+						<a class="btn btn-link btn-nav-purchase bl-4" href="">
+							<i class="icon golicons-flight"></i>
+							<span>Minha conta</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content-purchase-box">
+			<div id="collapsePoints" class="collapse pt-md-4 p-md-0 pt-0 p-4" aria-labelledby="points" data-parent="#accordion">
+				<div class="row justify-content-end">
+					<div class="col-12 col-pb-radios">
+						<ul class="list-inline radios-purchase">
+							<li class="form-check radio-pb">
+								<input class="form-check-input" type="radio" name="purchase-type" value="1" id="RoundTrip" checked="checked">
+								<label class="form-check-label text-uppercase" for="RoundTrip">Ida e volta</label>
+							</li>
+
+							<li class="form-check radio-pb">
+								<input class="form-check-input" type="radio" name="purchase-type" value="2" id="OneWay">
+								<label class="form-check-label text-uppercase" for="OneWay">Só ida ou volta</label>
+							</li>
+
+							<li class="form-check radio-pb">
+								<input class="form-check-input" type="radio" name="purchase-type" value="3" id="OpenJaw">
+								<label class="form-check-label text-uppercase" for="OpenJaw">Vários trechos</label>
+							</li>
+
+							<li class="form-check checkbox-pb mt-md-0 mt-2">
+								<input class="form-check-input" type="checkbox" id="pointsTrip">
+								<label class="form-check-label text-uppercase" for="pointsTrip">Buscar por quantidade de pontos</label>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 w-flex-100 col-pb-radios">
+						<div class="row m-0">
+							<div class="col-lg-7 col-pb-box-dates">
+								<div class="row">
+									<div class="box-pb box-date">
+										<span class="text-uppercase">
+											<i class="icon golicons-calendar"></i>
+											Ida
+										</span>
+										<div class="info-box row mt-2 mt-md-3 align-items-center no-gutters">
+											<span class="number col-6 col-sm-3 col-md-5 col-lg-6">19</span>
+											<span class="details col-6 col-sm-9 col-md-7 col-lg-6">
+												<span class="month d-block text-capitalize">
+													fevereiro
+												</span>
+												<span class="year d-block">
+													2018
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="box-pb box-date">
+										<span class="text-uppercase">
+											Volta
+											<i class="icon golicons-calendar"></i>
+
+										</span>
+										<div class="info-box row mt-2 mt-md-3 align-items-center no-gutters">
+
+											<span class="number col-6 col-sm-3 col-md-5 col-lg-6">19</span>
+											<span class="details col-6 col-sm-9 col-md-7 col-lg-6">
+												<span class="month d-block text-capitalize">
+													fevereiro
+												</span>
+												<span class="year d-block">
+													2018
+												</span>
+											</span>
+
+										</div>
+									</div>
+									<div class="box-pb box-number">
+										<span class="text-uppercase">
+											adultos
+										</span>
+										<div class="info-box row mt-2 mt-md-3 align-items-center no-gutters">
+											<span class="number col-6 col-sm-3 col-md-5 col-lg-6">8</span>
+											<span class="datails col-6 col-sm-9 col-md-7 col-lg-6">
+
+												<span class="info-year-old d-block">
+													+12
+												</span>
+												<span class="years d-block">
+													anos
+												</span>
+											</span>
+										</div>
+									</div>
+									<button class="col-12 text-uppercase btn btn-primary mt-4 mt-md-2">
+										compre aqui
+									</button>
+								</div>
+							</div>
+							<div class="col-lg text-white align-self-center text-center d-none d-md-block mt-md-4">
+								<i class="icon golicons-computer"></i>
+								<p class="mt-2 fs11">Para compra de passagens em dinheiro,
+									<br> acesse o
+									<a class="btn-link text-white text-underline" href="https://www.voegol.com.br/" title="Voegol" target="_blank">site da GOL.</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="collapseMakeCheckin" class="collapse pt-md-4 p-md-0 pt-0 p-4" aria-labelledby="make-checkin" data-parent="#accordion">
+				<div class="row justify-content-end">
+					<div class="col-12 col-pb-radios mb-md-3">
+						<ul class="nav nav-tabs text-uppercase" id="tabCheckin" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="makeCheckinLink" data-toggle="tab" href="#makeCheckinTab" role="tab" aria-controls="makeCheckinTab" aria-selected="true">Fazer check-in</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="cancelCheckinLink" data-toggle="tab" href="#cancelCheckinTab" role="tab" aria-controls="cancelCheckinTab" aria-selected="false">cancelar check-in</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="recoverCheckinLink" data-toggle="tab" href="#recoverCheckinTab" role="tab" aria-controls="recoverCheckinTab" aria-selected="false">recuperar cartão de embarque</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="tabCheckinContent">
+							<div class="tab-pane fade show active" id="makeCheckinTab" role="tabpanel" aria-labelledby="makeCheckinLink">
+								<ul class="list-inline radios-purchase mt-3 mb-3" id="makeCheckin" role="tablist">
+									<li class="form-check radio-pb">
+										<input class="form-check-input" type="radio" name="makeCheckin" value="1" id="localizator" checked="checked">
+										<label class="form-check-label text-uppercase" for="localizator">localizador</label>
+									</li>
+
+									<li class="form-check radio-pb">
+										<input class="form-check-input" type="radio" name="makeCheckin" value="2" id="cpf">
+										<label class="form-check-label text-uppercase" for="cpf">cpf</label>
+									</li>
+
+									<li class="form-check radio-pb">
+										<input class="form-check-input" type="radio" name="makeCheckin" value="3" id="nameAndLastName">
+										<label class="form-check-label text-uppercase" for="nameAndLastName">nome e sobrenome</label>
+									</li>
+								</ul>
+								<div class="tab-content" id="tabPanelMakeCheckin">
+									<form class="tab-pane fade show active" id="formsLocalizator" role="tabpanel" aria-labelledby="localizator">
+										<div class="row no-gutters mt-3">
+											<div class="col-12">
+												<div class="form-group form-control-purchase mb-2">
+													<label for="localizatorInput">localizador</label>
+													<input type="text" class="form-control" id="localizatorInput" placeholder="Digite seu localizador">
+												</div>
+											</div>
+											<div class="col-md-6 col-12 align-self-center mt-2 mb-3 mt-mb-0 mb-mb-0">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="checkinRules1">
+													<label class="form-check-label" for="checkinRules1">
+														Declaro que li e concordo com o
+														<a href="#checkinRules" title="Regulamento" data-toggle="modal" class="text-white" data-target="#checkinRules">
+															<u>regulamento</u>
+														</a>.
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<button class="w-100 text-uppercase btn btn-primary">
+													compre aqui
+												</button>
+											</div>
+										</div>
+									</form>
+									<form class="tab-pane fade" id="formCpf" role="tabpanel" aria-labelledby="cpf">
+										<div class="row no-gutters mt-3">
+											<div class="col-12">
+												<div class="form-group form-control-purchase mb-2">
+													<label for="cpfInput">cpf</label>
+													<input type="text" class="form-control" id="cpfInput" placeholder="Digite seu CPF">
+												</div>
+											</div>
+											<div class="col-md-6 col-12 align-self-center mt-2 mb-3 mt-mb-0 mb-mb-0">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="checkinRules2">
+													<label class="form-check-label" for="checkinRules2">
+														Declaro que li e concordo com o
+														<a href="#checkinRules" title="Regulamento" data-toggle="modal" class="text-white" data-target="#checkinRules">
+															<u>regulamento</u>
+														</a>.
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<button class="w-100 text-uppercase btn btn-primary">
+													compre aqui
+												</button>
+											</div>
+										</div>
+									</form>
+									<form class="tab-pane fade" id="formNameAndLastName" role="tabpanel" aria-labelledby="nameAndLastName">
+										<div class="row no-gutters mt-3">
+											<div class="col-md-6 col-12">
+												<div class="form-group form-control-purchase mb-2 mr-0 mr-md-2">
+													<label for="nameInput">nome</label>
+													<input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome">
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="form-group form-control-purchase mb-2">
+													<label for="lastNameInput">sobrenome</label>
+													<input type="text" class="form-control" id="lastNameInput" placeholder="Digite seu sobrenome">
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="form-group form-control-purchase mb-2 mr-0 mr-md-2">
+													<label for="airport-from-make-checkin" class="text-uppercase">viajar de</label>
+													<select class="form-control select-purchase-from" id="airport-from-make-checkin">
+														<option></option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="form-group form-control-purchase mb-2">
+													<label for="airport-to-make-checkin" class="text-uppercase">para</label>
+													<select class="form-control select-purchase-to" id="airport-to-make-checkin">
+														<option></option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6 col-12 align-self-center mt-2 mb-3 mt-mb-0 mb-mb-0">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="checkinRules3">
+													<label class="form-check-label" for="checkinRules3">
+														Declaro que li e concordo com o
+														<a href="#checkinRules" title="Regulamento" data-toggle="modal" class="text-white" data-target="#checkinRules">
+															<u>regulamento</u>
+														</a>.
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<button class="w-100 text-uppercase btn btn-primary">
+													compre aqui
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<form class="tab-pane fade" id="cancelCheckinTab" role="tabpanel" aria-labelledby="cancelCheckinLink">
+								<div class="row no-gutters mt-3">
+									<div class="col-md-6 col-12">
+										<div class="form-group form-control-purchase mb-2 mr-0 mr-md-2">
+											<label for="nameInput">localizador</label>
+											<input type="text" class="form-control" id="nameInput" placeholder="Digite seu localizador">
+										</div>
+									</div>
+									<div class="col-md-6 col-12">
+										<div class="form-group form-control-purchase mb-2">
+											<label for="airport-from-cancel-checkin" class="text-uppercase">De onde partiu seu voo?</label>
+											<select class="form-control select-purchase-from" id="airport-from-cancel-checkin">
+												<option></option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6 col-12 align-self-center mt-2 mb-3 mt-mb-0 mb-mb-0">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="checkinRules4">
+											<label class="form-check-label" for="checkinRules4">
+												Declaro que li e concordo com o
+												<a href="#checkinRules" title="Regulamento" data-toggle="modal" class="text-white" data-target="#checkinRules">
+													<u>regulamento</u>
+												</a>.
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-12">
+										<button class="text-uppercase btn btn-primary">
+											compre aqui
+										</button>
+									</div>
+								</div>
+							</form>
+							<form class="tab-pane fade" id="recoverCheckinTab" role="tabpanel" aria-labelledby="recoverCheckinLink">
+								<div class="row no-gutters mt-3">
+									<div class="col-12">
+										<div class="form-group form-control-purchase mb-2">
+											<label for="localizadorRecoverInput">localizador</label>
+											<input type="text" class="form-control" id="localizadorRecoverInput" placeholder="Digite seu localizador">
+										</div>
+									</div>
+									<div class="col-md-6 col-12 align-self-center mt-2 mb-3 mt-mb-0 mb-mb-0">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="checkinRules5">
+											<label class="form-check-label" for="checkinRules5">
+												Declaro que li e concordo com o
+												<a href="#checkinRules" title="Regulamento" data-toggle="modal" class="text-white" data-target="#checkinRules">
+													<u>regulamento</u>
+												</a>.
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 col-6">
+										<button class="w-100 text-uppercase btn btn-primary">
+											compre aqui
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="collapseStatusFlight" class="collapse pt-md-4 p-md-0 pt-0 p-4" aria-labelledby="status-flight" data-parent="#accordion">
+				3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+				non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+				put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+				labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+				beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+				VHS.
+			</div>
+			<button class="btn btn-link text-uppercase text-md-right text-center w-100" id="btn-close">Fechar
+				<i class="icon golicons-arrow-up"></i>
+			</button>
+		</div>
+	</div>
+</div>

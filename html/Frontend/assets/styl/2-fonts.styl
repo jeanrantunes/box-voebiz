@@ -1,0 +1,236 @@
+@import 'nib'
+#s4-workspace
+  @font-face {
+      font-family: SansaPro;
+      src: url(../fonts/sansapro-semibold.eot?2853ah);
+      src: url(../fonts/sansapro-semibold.eot?2853ah#iefix) format("embedded-opentype"), url(../fonts/sansapro-semibold.ttf?2853ah) format("truetype"), url(../fonts/sansapro-semibold.woff?2853ah) format("woff"), url(../fonts/sansapro-semibold.svg?2853ah#sansapro-semibold) format("svg");
+      font-weight: 600;
+      font-style: normal
+  }
+
+  @font-face {
+      font-family: gol-icons;
+      src: url(../fonts/gol-icons.eot?2853ah);
+      src: url(../fonts/gol-icons.eot?2853ah#iefix) format("embedded-opentype"), url(../fonts/gol-icons.ttf?2853ah) format("truetype"), url(../fonts/gol-icons.woff?2853ah) format("woff"), url(../fonts/gol-icons.svg?2853ah#gol-icons) format("svg");
+      font-weight: 400;
+      font-style: normal
+  }
+
+  /* Icones */
+
+  .cancellation__flight__itinerary>li:first-child:before,
+  .choosing .purchase__seats__flight__passenger__seat:after,
+  .flights-list__column.flights-list__column--origin:before,
+  .flights-list__passengers.flights-list__passengers--more:after,
+  .flights-list__passengers:before,
+  .form-group__wrapper.form-group__wrapper--search:after,
+  .form-group__wrapper.form-group__wrapper--select:after,
+  .golicons,
+  .itinerary-timeline__point.itinerary-timeline__point--marker:after,
+  .itinerary-timeline__point.itinerary-timeline__point--point:after,
+  .menu__login__cta--logged .menu__login__headline:after,
+  .my-account__hello:before,
+  .purchase__flight__part:nth-child(odd):before,
+  .purchase__flights__category-modal__benefit:before,
+  .purchase__passenger__header>a:after,
+  .purchase__payment-token .payment-token--valid .btn:before,
+  .purchase__seats__flight__points:before,
+  .purchase__summary__passenger-box__passenger:before,
+  .purchase__user:before,
+  .ticket__flight__points:before,
+  .transactions-list__column--flight-origin:before,
+  .ui-datepicker.ui-datepicker .ui-datepicker-next:before,
+  .ui-datepicker.ui-datepicker .ui-datepicker-prev:before,
+  [class*=" golicons-"],
+  [class^=golicons-],
+  input:checked+.purchase__payment__option__card:after {
+      font-family: gol-icons!important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+  }
+  .cancellation__flight__itinerary>li:first-child:before,
+  .flights-list__column.flights-list__column--origin:before,
+  .golicons-airplane:before,
+  .purchase__flight__part:nth-child(odd):before,
+  .transactions-list__column--flight-origin:before {
+      content: "\e906"
+  }
+  .golicons-airplane-flying:before {
+      content: "\e90e"
+  }
+  .golicons-airplane-marker:before {
+      content: "\e90f"
+  }
+  .form-group__wrapper.form-group__wrapper--select:after,
+  .golicons-arrow-down:before,
+  .purchase__passenger__header>a:after {
+      content: "\e902"
+  }
+  .golicons-arrow-left:before,
+  .ui-datepicker.ui-datepicker .ui-datepicker-prev:before {
+      content: "\e903"
+  }
+  .choosing .purchase__seats__flight__passenger__seat:after,
+  .golicons-arrow-right:before,
+  .ui-datepicker.ui-datepicker .ui-datepicker-next:before {
+      content: "\e904"
+  }
+  .golicons-arrow-up:before,
+  .menu__login__cta--logged .menu__login__headline:after {
+      content: "\e905"
+  }
+  .golicons-calendar:before {
+      content: "\e910"
+  }
+  .golicons-cancel:before {
+      content: "\e927"
+  }
+  .golicons-card-passing:before {
+      content: "\e923"
+  }
+  .golicons-check:before,
+  .purchase__flights__category-modal__benefit:before,
+  .purchase__payment-token .payment-token--valid .btn:before,
+  input:checked+.purchase__payment__option__card:after {
+      content: "\e912"
+  }
+  .golicons-check-bold:before {
+      content: "\e92a"
+  }
+  .golicons-clock:before {
+      content: "\e907"
+  }
+  .golicons-computer:before {
+      content: "\e911"
+  }
+  .golicons-consulting:before {
+      content: "\e928"
+  }
+  .golicons-dot:before,
+  .itinerary-timeline__point.itinerary-timeline__point--point:after {
+      content: "\e913"
+  }
+  .golicons-download:before {
+      content: "\e926"
+  }
+  .golicons-facebook:before {
+      content: "\e917"
+  }
+  .golicons-flexibility:before {
+      content: "\e929"
+  }
+  .golicons-flight:before {
+      content: "\e908"
+  }
+  .golicons-glasses:before {
+      content: "\e924"
+  }
+  .golicons-google-plus:before {
+      content: "\e918"
+  }
+  .golicons-hand-luggage:before {
+      content: "\e90a"
+  }
+  .golicons-home:before {
+      content: "\e919"
+  }
+  .golicons-instagram:before {
+      content: "\e91a"
+  }
+  .golicons-like:before {
+      content: "\e92c"
+  }
+  .flights-list__passengers.flights-list__passengers--more:after,
+  .flights-list__passengers:before,
+  .golicons-login:before,
+  .my-account__hello:before,
+  .purchase__summary__passenger-box__passenger:before,
+  .purchase__user:before {
+      content: "\e91b"
+  }
+  .golicons-mail:before {
+      content: "\e92f"
+  }
+  .golicons-marker:before,
+  .itinerary-timeline__point.itinerary-timeline__point--marker:after {
+      content: "\e914"
+  }
+  .golicons-pdf:before {
+      content: "\e92d"
+  }
+  .golicons-percentage-tag:before {
+      content: "\e90b"
+  }
+  .golicons-pinterest:before {
+      content: "\e900"
+  }
+  .golicons-play:before {
+      content: "\e92b"
+  }
+  .golicons-price-tag:before {
+      content: "\e90c"
+  }
+  .golicons-printer:before {
+      content: "\e915"
+  }
+  .golicons-refresh:before {
+      content: "\e916"
+  }
+  .golicons-rss:before {
+      content: "\e91c"
+  }
+  .form-group__wrapper.form-group__wrapper--search:after,
+  .golicons-search:before {
+      content: "\e91d"
+  }
+  .golicons-seats:before {
+      content: "\e925"
+  }
+  .golicons-services:before {
+      content: "\e92e"
+  }
+  .golicons-spire-down:before {
+      content: "\e91f"
+  }
+  .golicons-spire-left:before {
+      content: "\e920"
+  }
+  .golicons-spire-right:before,
+  .purchase__seats__flight__points:before,
+  .ticket__flight__points:before {
+      content: "\e921"
+  }
+  .golicons-spire-up:before {
+      content: "\e922"
+  }
+  .golicons-ticket:before {
+      content: "\e90d"
+  }
+  .golicons-twitter:before {
+      content: "\e91e"
+  }
+  .golicons-watch:before {
+      content: "\e909"
+  }
+  .golicons-youtube:before {
+      content: "\e901"
+  }
+  .acessibility__currency__button:after,
+  .checkbox>label:after,
+  .checkbox>label:before,
+  .content:after,
+  .form-select-label:before,
+  .hearder__main-logos__list li:first-child:after,
+  .main-login:before,
+  .radio>label:after,
+  .radio>label:before,
+  .toggle label:after,
+  .toggle label:before {
+      content: ""
+  }

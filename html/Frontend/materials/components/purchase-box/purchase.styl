@@ -1,0 +1,413 @@
+@import 'nib'
+
+#s4-workspace
+    margin: 0
+    .fs11
+        font-size 0.688em
+    
+    [data-component="Purchase-box"]
+        font-family Arial, Helvetica, sans-serif
+        .text-underline
+            text-decoration underline
+        @media (min-width: 992px)
+            .col-lg-pb-8
+                flex: 0 0 64.34%
+                max-width: 64.34%
+            .col-lg-pb-4
+                flex: 0 0 35.66%
+                max-width: 35.66%
+            .col-lg-pb-2
+                flex: 0 0 21.666667%
+                max-width:21.666667%
+            .col-lg-pb-5
+                flex: 0 0 39.1666665%
+                max-width:39.1666665%
+            .col-pb-radios
+                flex: 0 0 86%
+                max-width:86%
+            .col-pb-box-dates
+                flex: 0 0 60.3%
+                max-width: 60.3%            
+        .bl-4
+            border-left: 4px solid #ff5a00
+        .br-4
+            border-right: 4px solid #ff5a00
+        background-color: #ff5a00
+        border-radius: 13px;
+        padding 20px
+        .btn-nav-purchase.no-bg
+            background-color transparent
+            span
+                font-size 18px
+                padding-left 44px
+            .golicons-airplane
+                font-size 3em
+        .btn-nav-purchase
+            font-size: 0.875em
+            height: 49px
+            font-weight: 600
+            padding: 7px 4px
+            font-family: SansaPro, Arial, Helvetica, sans-serif
+            line-height: 1.2;
+            text-align: left;
+            color #fff !important
+            white-space normal
+            background-color #FF7B33
+            border-radius 0
+            width 100%
+            display: flex
+            justify-content: center
+            flex-direction: column
+            span
+                display block
+                padding-left: 32px
+            .icon
+                position absolute
+                top: 50%
+                transform: translateY(-50%);
+                font-size: 2.14286em
+        .form-control-purchase
+            background-color #fff
+            height 49px
+            margin-bottom 0
+            label
+                font-size 0.75em
+                text-transform uppercase
+                color #797979
+                font-family: Arial
+                font-weight: normal
+                font-style: normal
+                font-stretch: normal
+                line-height: 1.42
+                letter-spacing: normal
+                text-align: left
+                color: #797979
+                margin-bottom 0
+                padding: 7px 10px 0
+                position absolute
+                z-index 100
+            input.form-control 
+                border none
+                margin-bottom: 1rem
+                padding: 24px 10px 1px 10px
+                color: #ff5a00
+                &::-webkit-input-placeholder
+                    color: #ff5a00
+                &::-moz-placeholder /* Firefox 19+ 8*/
+                    color: #ff5a00
+                &:-ms-input-placeholder /* IE 10+ */
+                    color: #ff5a00
+                &:-moz-placeholder /* Firefox 18- */
+                    color: #ff5a00
+                &:focus
+                    outline: 2px solid #436389
+                    border-radius 0
+                    box-shadow none
+            .select2-selection__rendered
+                padding-left 10px
+                color: #ff5a00
+                font-family: Arial
+                padding-top: 1.4em
+                &:focus
+                    outline none
+            .select2-selection
+                border none
+                border-radius 0
+                height 19px
+                margin-top -4px
+            .select2-selection__arrow
+                display none
+            .select2-container--focus
+                outline none
+                &:focus
+                    outline none
+            .select2-selection__placeholder
+                font-family: Arial
+                font-size: 1rem
+                font-weight: normal
+                font-style: normal
+                font-stretch: normal
+                line-height: 0.94
+                letter-spacing: normal
+                text-align: left
+                color: #ff5a00
+        .btn-primary
+            background-color: #436389
+            color: #FFF
+            border-radius 0
+            border-color #436389
+            padding 1.16667em 2.33333em
+            font-size 0.75
+            font-weight bold
+            line-height: 1.42
+            letter-spacing: 0px
+            font-family inherit
+            &:hover
+            &:focus 
+                border-color: #436389
+                background-color: #436389
+                color: #FFF
+                box-shadow none
+            &:active
+                color: #fff
+                background-color: #204d74
+                border-color:  #204d74
+                outline none
+                box-shadow none !important
+        #btn-close
+            color #fff
+            margin: 0
+            padding 0
+            display none
+            font-family: inherit
+            &:hover
+            &:focus
+                text-decoration none
+            i
+                margin-left: .41667em
+                font-size: .91667em
+        .box-pb
+            background-color #fff
+            display inline-block
+            color #5f5f5f
+            position: relative
+            width: 100%
+            min-height: 1px
+            padding-right: 15px
+            padding-left: 15px
+            > span
+                font-size 0.750em                 
+        .box-date
+            flex: 0 0 37.5%
+            max-width: 37.5%
+            border-right 4px solid #ff5a00
+            > span
+                padding-left 2.8em
+                position absolute
+                position relative
+            i 
+                font-size: 1.46rem
+                color: #5f5f5f
+                position absolute
+                left 0
+                bottom -2px
+        .box-number
+            flex: 0 0 25%
+            max-width: 25%
+        .box-pb
+            padding 15px 15px 24px 15px
+            .info-box
+                .number
+                    font-size 3.438em
+                    font-family inherit
+                    color #e64418
+                    line-height 44px
+        .golicons-computer
+            font-size 2em
+        .form-check 
+            input
+                display none
+            label
+                color #fff
+                font-size: .75em
+                line-height: 1.4
+                &:before
+                &:after
+                    content: ""
+                    position absolute
+                    display: inline-block
+                    background-color: transparent
+                    transition: background-color .2s
+                &:before
+                    border:2px solid #FFF
+                    top: 4px
+                    left: 0
+                    width: 12px
+                    height: 12px
+                &:after
+                    top: 8px
+                    left: 4px
+                    width: 4px
+                    height: 4px
+            input[type="checkbox"]
+                    &:checked+label
+                        &:after
+                            background-color #fff    
+        .radios-purchase
+            li.form-check
+                padding-left 1rem
+                display inline-block
+                label
+                    font-family inherit
+                    font-size 0.750em
+                    letter-spacing: 0.4px
+                    color #fff
+            li.checkbox-pb
+                padding-left 2rem
+                input
+                    display none
+                label
+                    &:before
+                    &:after
+                        content: ""
+                        position absolute
+                    &:before
+                        top: 4px
+                        left: 0
+                        width: 24px
+                        height: 12px
+                        border-radius: 6px
+                        border: 2px solid #fff
+                        background-color: transparent
+                        transition: background-color .2s
+                        display inline-block
+                    &:after
+                        top: 7px
+                        left: 4px
+                        width: 6px
+                        height: 6px
+                        border-radius: 3px
+                        background-color: #fff
+                        transition: left .2s, background-color .2s
+            li.radio-pb
+                margin-right 22px
+                input
+                    display none
+                input[type="radio"]
+                    &:checked+label
+                        &:after
+                            background-color #fff
+                .form-check-label
+                    &:before
+                    &:after
+                        position: absolute
+                        display: inline-block
+                        border-radius: 50%
+                        background-color: transparent
+                        transition: background-color .2s
+                        content ""
+                    &:before
+                        top: 5px
+                        left: 0
+                        width: 11px
+                        height: 11px
+                        border: 2px solid #fff
+                    &:after
+                        width: 10px
+                        height: 10px
+                        top: 5px
+                        left: 1px          
+    .select2-dropdown
+        top -19px
+        border: 2px solid #436389
+        border-radius 0
+        padding-top 20px
+        background transparent
+        .select2-search
+            padding 4px 8px
+            background: #fff
+        .select2-results__options
+            background #fff
+            height 126px
+            li
+                padding: .55em .71429em
+                font-size: .875em
+                text-overflow: ellipsis
+                color: #FF5A00
+                overflow: hidden
+                white-space: nowrap
+                cursor: pointer
+            .select2-results__option--highlighted
+            [aria-selected="true"]
+                background-color: #F4F4F4
+        input
+            border: none
+            outline: none
+            padding 0
+            color: #ff5a00
+            font-family Arial, Helvetica, sans-serif
+            font-size 1rem
+        input:focus
+            outline none
+        .btn-modal
+            color: #436389
+            background #ededed
+            border-radius: 0;
+            font-size: .75em
+            line-height: 1.5em
+            text-overflow: ellipsis
+            overflow: hidden
+            border none
+            padding .66667em 1.33333em
+            font-family Arial
+            font-weight 600
+            &:focus
+                box-shadow none
+            i
+                margin-right .625em
+        .select2-results__options
+            margin-bottom 0
+    @media (min-width: 768px)
+        .p-md-15 
+            padding-right 15px !important
+            padding-left 15px !important
+        .col-pb-radios
+            flex: 0 0 82%
+            max-width:82%
+            
+    @media (max-width: 992px)
+        [data-component="Purchase-box"]
+            .box-number
+                width 25.3%
+    @media (max-width: 768px)
+        [data-component="Purchase-box"]
+            border-radius 0
+            padding 0
+            .bl-4
+                border-left: 2px solid #ff5a00
+            .br-4
+                border-right: 2px solid #ff5a00
+            .h-md-100
+                height auto
+            .radio-pb
+                width 32%
+                margin-right 0 !important
+                padding-right 8px
+            .collapse.show.pt-0
+                padding-top 0 !important
+            .box-pb
+                padding 2px 10px 5px 8px
+                .info-box
+                    .number
+                        font-size 1.875em
+                        line-height 25px
+                span 
+                    font-size 10px
+                
+            .box-date
+                > span 
+                    padding-left 1.2rem
+                i
+                    font-size 0.9rem
+                    bottom -1px
+    @media (max-width: 420px)
+        [data-component="Purchase-box"]
+            .btn-nav-purchase
+                padding 7px 1px
+                span
+                    padding-left 30px
+    @media (max-width: 385px)
+        [data-component="Purchase-box"]
+            .btn-nav-purchase
+                padding  7px 0
+                font-size 13px
+                .icon
+                    font-size 1.8em
+                span
+                    padding-left 23px
+    .w-flex-100
+        flex: 0 0 100%
+        max-width:100%    
+    .btn
+        font-size .75em
+        line-height 1.5em
