@@ -35,15 +35,14 @@
         background-color: #ff5a00
         border-radius: 13px;
         padding 20px
-        .btn-nav-purchase.no-bg
-            background-color transparent
-            span
-                font-size 18px
-                padding-left 44px
-            .golicons-airplane
-                font-size 3em
+        #navMain.nav-tabs
+            border none
+        .btn-nav-purchase.show
+            background-color #E34218
+        
         .btn-nav-purchase
             font-size: 0.875em
+            text-decoration none
             height: 49px
             font-weight: 600
             padding: 7px 4px
@@ -66,6 +65,20 @@
                 top: 50%
                 transform: translateY(-50%);
                 font-size: 2.14286em
+            &:active
+                box-shadow: inset 0 3px 5px rgba(0,0,0,.125)
+        .btn-nav-purchase.btn-nav-link
+            background-color #FF7B33
+        .btn-nav-purchase.no-bg
+            background-color transparent
+            span
+                font-size 18px
+                padding-left 44px
+            .golicons-airplane
+                font-size 3em
+            &:active
+                box-shadow: none
+        
         .form-control-purchase
             background-color #fff
             height 49px
@@ -166,21 +179,46 @@
             i
                 margin-left: .41667em
                 font-size: .91667em
+        .box-pb.input-focused
+            border-color #436389
         .box-pb
             background-color #fff
+            border 2px solid #fff
             display inline-block
             color #5f5f5f
             position: relative
             width: 100%
             min-height: 1px
-            padding-right: 15px
-            padding-left: 15px
+            padding 15px 15px 24px 15px
             > span
-                font-size 0.750em                 
+                font-size 0.750em
+            input 
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                display: block
+                width: 100%
+                height: 100%
+                opacity: 0
+                cursor: pointer
+            .info-box
+                .number
+                    font-size 3.438em
+                    font-family inherit
+                    color #e64418
+                    line-height 44px
+        .box-date.disabled
+            background-color #ff8b4c
+            border-color #ff8b4c
+            > span 
+            > div
+                display none
         .box-date
-            flex: 0 0 37.5%
-            max-width: 37.5%
-            border-right 4px solid #ff5a00
+            flex: 0 0 36.4%
+            max-width: 36.6%
+            margin-right 1%
             > span
                 padding-left 2.8em
                 position absolute
@@ -194,17 +232,34 @@
         .box-number
             flex: 0 0 25%
             max-width: 25%
-        .box-pb
-            padding 15px 15px 24px 15px
-            .info-box
-                .number
-                    font-size 3.438em
-                    font-family inherit
-                    color #e64418
-                    line-height 44px
+            &:hover
+                border-color #436389
+                .numbers-addRemove 
+                    display block
+                    a:active
+                        box-shadow: inset 0 3px 5px rgba(0,0,0,.125) 
+            .numbers-addRemove
+                display none
+                position absolute 
+                top 0
+                left 0
+                right 0
+                transition: visibility 0s .2s linear, opacity .2s linear
+                a
+                    clear: none
+                    float: left
+                    padding: .1em 0
+                    margin: 0
+                    width: 50%
+                    font-size: 1.6em
+                    line-height: 1
+                    background-color: #436389
+                    color: #FFF
+                    text-decoration none
+            
         .golicons-computer
             font-size 2em
-        .form-check 
+        .form-check.checkbox-pb 
             input
                 display none
             label
@@ -269,7 +324,10 @@
                         border-radius: 3px
                         background-color: #fff
                         transition: left .2s, background-color .2s
+        /*radios box de compra*/
+        .radios-purchase     
             li.radio-pb
+                width auto 
                 margin-right 22px
                 input
                     display none
@@ -296,7 +354,76 @@
                         width: 10px
                         height: 10px
                         top: 5px
-                        left: 1px          
+                        left: 1px
+            @media (max-width 500px)
+                #makeCheckin
+                    li.radio-pb
+                        .form-check-label
+                            &:before
+                                top: 2px
+                            &:after
+                                top 2px
+                    .radio-pb:first-child
+                        flex: 0 0 40%
+                        max-width: 40%
+                        width 40%
+                        display: flex
+                    .radio-pb:nth-child(2)
+                        flex: 0 0 18%
+                        max-width: 18%
+                        width 18%
+                        display: flex
+                    .radio-pb:nth-child(3)
+                        flex: 0 0 38%
+                        max-width: 38%
+                        width 38%
+                        display: flex
+        .box-date-flight
+            padding 20px
+            border 2px solid #fff
+            font-family inherit
+            color #fff
+            .day 
+                font-size: 3.4375em
+                line-height 51px
+            .date
+                font-size: 1em
+        @media (max-width 992px)
+            .box-date-flight
+                padding: 15px
+                .day
+                    font-size 2.600em
+                .date
+                    font-size 0.750em
+        .box-date-flight.today
+            background-color #fff
+            color #ff5a00
+        .subtitle
+            margin-bottom: 1.07143em
+            font-size: .875em
+        @media (max-width 768px)
+            #purchase-type
+                .radio-pb
+                    width 32%
+                    margin-right 0 !important
+                    padding-right 8px        
+        #tabCheckin
+            a.nav-link
+                color: #fff
+                font-family inherit
+                padding: 0px 15px 10px 15px
+                font-size: 0.75em
+                font-weight bold
+                border none
+                &:hover
+                &:active
+                &.active
+                    background: 0 0
+                    border: none
+                    border-bottom: 2px solid #FFF !important
+                &:focus
+                    border none
+                       
     .select2-dropdown
         top -19px
         border: 2px solid #436389
@@ -369,10 +496,6 @@
                 border-right: 2px solid #ff5a00
             .h-md-100
                 height auto
-            .radio-pb
-                width 32%
-                margin-right 0 !important
-                padding-right 8px
             .collapse.show.pt-0
                 padding-top 0 !important
             .box-pb
@@ -390,6 +513,7 @@
                 i
                     font-size 0.9rem
                     bottom -1px
+        
     @media (max-width: 420px)
         [data-component="Purchase-box"]
             .btn-nav-purchase
@@ -411,3 +535,101 @@
     .btn
         font-size .75em
         line-height 1.5em
+    .w-30
+        width 30%
+    .w-40
+        width 40%
+    .p-15
+        padding 15px !important
+
+
+
+    .ui-datepicker.ui-datepicker {
+        padding: 1.25em;
+        margin-left: -2px;
+        border-radius: 0;
+        border: 2px solid #436389;
+        font-size: 1em
+    }
+    .ui-datepicker.ui-datepicker .ui-widget-header {
+        border: none;
+        background: #FFF
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-title {
+        font-size: 1em;
+        color: #FF5A00
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next,
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev {
+        top: 50%;
+        width: 1.25em;
+        height: 1.375em;
+        border-radius: 0;
+        background: #436389;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: pointer
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next.ui-state-hover,
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev.ui-state-hover {
+        border: none;
+        background-color: #4b6f9a
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next:before,
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: .6875em;
+        color: #FFF;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next .ui-icon,
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev .ui-icon {
+        display: none
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev.ui-state-hover {
+        left: 2px
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next.ui-state-hover {
+        right: 2px
+    }
+    .ui-datepicker.ui-datepicker th {
+        font-size: .5em;
+        text-transform: uppercase;
+        color: #436389
+    }
+    .ui-datepicker.ui-datepicker .ui-state-default {
+        border: none;
+        background: #FFF;
+        font-size: .75em;
+        text-align: center
+        font-weight: normal;
+        color: #555 !important;
+        background-color #fff;
+        text-align: center; 
+    }
+    .ui-datepicker.ui-datepicker .ui-state-default.ui-state-hover {
+        background-color: #EDEDED
+    }
+    .ui-datepicker.ui-datepicker .ui-state-highlight {
+        font-weight: 700;
+        color: #436389
+    }
+    .ui-datepicker.ui-datepicker .ui-state-active {
+        font-weight: 700;
+        color: #FF5A00
+    }
+    .ui-datepicker.ui-datepicker .ui-datepicker-next:before,
+    .ui-datepicker.ui-datepicker .ui-datepicker-prev:before {
+        font-family: gol-icons!important;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
